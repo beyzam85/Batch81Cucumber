@@ -1,0 +1,6 @@
+pages\TrendyolMorhipoPage.class
+runners\Runner2.class
+runners\Runner.class
+stepDefinitions\SauceDemoStepDefinition.class
+stepDefinitions\TrendyolMorhipoStepDefinitions.class
+pages\SauceDemoPages.class
