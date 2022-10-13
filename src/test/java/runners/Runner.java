@@ -9,9 +9,17 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "stepDefinitions",
         //tags = "@gp2 or @bunu", // iki tag'ı aynı anda çalıştırmak isterseniz "@gp1 or @gp2"
-        tags = "@parametre",                //@ hangisini istersek onu yazarz onu calıştırır
-        dryRun = false             // true yapınca browser calişmadan test eder
-
+        tags = "@PracticeAmazon",                //@ hangisini istersek onu yazarz onu calıştırır
+        dryRun = false      // true yapınca browser calişmadan test eder ve elsik stepdefinişinları bulmak için lıkllanılır
+/*
+Runner class: Cucumber ın olmazsa olmazlarındandır.
+Runwith olmazsa olmazdır
+CucumberOptions: Junitten geliyor, testlerimizi bu anatotion ile resources-feature da bulunan
+Glue kısmı  ile birbirine yapıştırıyoruz, yani feauture fileım ile stepDefinition umu birbirine yapıştırıyorum
+Daha sonra tag kısmında feature içinde olusturdugum isimlendirme  kısmını burada çağırıyorum.
+dryRun(prova anlamında)= true ile calıstırdığımızda  eksik stepDefinitionları bulmak için kullanıyoruz, browser ı açmadan toolumuza getirir.
+                                              =false: varsayılan olarak false gelir. Browser calısır. Normal test case lerimizi koşacağımız zaman kullanıyoruz.
+ */
 )
 public class Runner {
     /*

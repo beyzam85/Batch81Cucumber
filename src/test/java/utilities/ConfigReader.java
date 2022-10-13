@@ -1,35 +1,42 @@
 package utilities;
 
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-    public static Properties properties;
 
-    static{
-        String dosyaYolu="configuration.properties";
-
+    //This class reads the configuration.properties file
+    //Create Properties instance
+    private static Properties properties;
+    static {
+        //path of the configuration file
+        String path= "configuration.properties";
         try {
-            FileInputStream fis=new FileInputStream(dosyaYolu);
-            // fis dosyayolunu tanimladigimiz configuration.properties dosyasini okudu
-            properties=new Properties();
-            properties.load(fis); // fis'in okudugu bilgileri properties'e yukledi
-
-
-
-        } catch (IOException e) {
+            //Opening configuration.properties file using FileInputStream
+            FileInputStream fileInputStream = new FileInputStream(path);
+            properties = new Properties();
+            properties.load(fileInputStream);
+            //close the file
+            fileInputStream.close();
+        } catch (Exception e) {
             e.printStackTrace();
         }
-    }
 
+    }
+    //This method will get the key from properties file,
+    //And return the value as String
+    //We create this method to read the file
     public static String getProperty(String key){
-        /*
-          test method'undan yolladigimiz string key degerini alip
-          Properties class'indan getProperty( ) method'unu kullanarak
-          bu key'e ait value'u bize getirdi
-         */
-
-        return properties.getProperty(key);
+        String value=properties.getProperty(key);
+        return value;
     }
+    //TEST IF LOGIC WORKS
+//    public static void main(String[] args) {
+//        System.out.println(properties.getProperty("techproed_url"));
+//        System.out.println(properties.getProperty("google_url"));
+//        System.out.println(properties.getProperty("browser"));
+//        System.out.println(properties.getProperty("fasdgasdgads"));
+//    }
+
+
 }
