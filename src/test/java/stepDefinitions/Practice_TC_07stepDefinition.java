@@ -12,30 +12,32 @@ import java.io.IOException;
 
 public class Practice_TC_07stepDefinition {
         PracticeTC07Page practiceTC07Page = new PracticeTC07Page();
-        @Given("Tarayiciyi baslatarak {string} url'sine gidin")
-        public void tarayiciyiBaslatarakUrlSineGidin(String istenenUrl) {
+
+        @Given("Tarayıcıyı başlatarak {string} url'sine gidin")
+        public void tarayıcıyıBaşlatarakUrlSineGidin(String istenenUrl) {
                 Driver.getDriver().get(istenenUrl);
+
         }
 
-        @Then("Ana sayfanin basariyla gorunur oldugunu dogrulayin")
-        public void anaSayfaninBasariylaGorunurOldugunuDogrulayin() {
+        @Then("Ana sayfanın başarıyla görünür olduğunu doğrulayın")
+        public void anaSayfanınBaşarıylaGörünürOlduğunuDoğrulayın() {
                 String homeUrl ="https://automationexercise.com/";
                 Assert.assertEquals("https://automationexercise.com/",Driver.getDriver().getCurrentUrl());
         }
 
-        @And("Test Case buttonu na tiklayin")
-        public void testCaseButtonuNaTiklayin() {
+        @And("Test Case buttonu na tıklayın")
+        public void testCaseButtonuNaTıklayın() {
                 practiceTC07Page.testCaseLink.click();
 
         }
 
-        @And("Kullanicinin test case sayfasina basariyla yonlendirildigini dogrulayin")
-        public void kullanicininTestCaseSayfasinaBasariylaYonlendirildiginiDogrulayin() {
-                Assert.assertTrue(practiceTC07Page.testCaseTitle.isDisplayed());
+        @Then("Kullanıcının test case sayfasına başarıyla yönlendirildiğini doğrulayın")
+        public void kullanıcınınTestCaseSayfasınaBaşarıylaYönlendirildiğiniDoğrulayın() {
+          Assert.assertTrue(practiceTC07Page.testCaseTitle.isDisplayed());
         }
 
-        @And("ilgili sayfanin ekran goruntusunu alin")
-        public void ilgiliSayfaninEkranGoruntusunuAlin() {
+        @And("İlgili sayfanın ekran görüntüsünü alın")
+        public void i̇lgiliSayfanınEkranGörüntüsünüAlın() {
                 try {
                         ReusableMethods.getScreenshot("automationexecises_testcasepage");
                 } catch (IOException e) {

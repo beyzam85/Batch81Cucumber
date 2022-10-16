@@ -21,14 +21,14 @@ public class BlueRentaCar {
 
     @Then("Login yazisina tiklar")
     public void loginYazisinaTiklar() {
-        brcPage.login.click();
+        brcPage.brclogin.click();
 
 
     }
 
     @And("gecersiz username girer")
     public void gecersizUsernameGirer() {
-        brcPage.email.sendKeys("gecersiz@gmail.com");
+        brcPage.userEmail.sendKeys("gecersiz@gmail.com");
     }
 
     @And("gecersiz password girer")

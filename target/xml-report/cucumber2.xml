@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="40.506">
+    <testcase classname="US001 Background Kullanimi" name="TC02 kullanici amazonda Selenium aratir" time="17.52">
+        <system-out>
+            <![CDATA[Given kullanici amazon sayfasina gider......................................passed
+Then kullanici Selenium icin arama yapar....................................passed
+And sonuclarin Selenium icerdigini test eder................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Parametre Kullanimi" name="TC02 Parametre kullaniminda ConfigReader Kullanimi" time="1.472">
+        <failure message="null value in entry: url=null" type="java.lang.NullPointerException">
+            <![CDATA[Given kullanici "google" sayfasina gider....................................failed
+Then kullanici 3 saniye bekler..............................................skipped
+When url'nin "google" icerdigini test edelim................................skipped
+And sayfayi kapatir.........................................................skipped
+
+StackTrace:
+java.lang.NullPointerException: null value in entry: url=null
+	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:33)
+	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:43)
+	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:81)
+	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:128)
+	at org.openqa.selenium.remote.DriverCommand.GET(DriverCommand.java:76)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at stepDefinitions.AmazonStepDefinition.kullaniciSayfasinaGider(AmazonStepDefinition.java:113)
+	at ✽.kullanici "google" sayfasina gider(file:///C:/Users/ASUS/IdeaProjects/batch81Cucumber/src/test/resources/features/US003_ParametreVeConfigReader.feature:11)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Amazon Search" name="TC03 kullanici amazonda iphone aratir" time="20.521">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#twotabsearchtextbox&quot;}&#10;  (Session info: chrome=106.0.5249.119)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'DESKTOP-TIQM0QR', ip: '192.168.1.122', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [8a887e5588eedcc9e8020102ed654a5c, findElement {using=id, value=twotabsearchtextbox}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\ASUS\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59345}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59345/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 8a887e5588eedcc9e8020102ed654a5c" type="org.openqa.selenium.NoSuchElementException">
+            <![CDATA[Given kullanici amazon sayfasina gider......................................passed
+Then kullanici iphone icin arama yapar......................................failed
+And sonuclarin iphone icerdigini test eder..................................skipped
+And sayfayi kapatir.........................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#twotabsearchtextbox"}
+  (Session info: chrome=106.0.5249.119)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'DESKTOP-TIQM0QR', ip: '192.168.1.122', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.16.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8a887e5588eedcc9e8020102ed654a5c, findElement {using=id, value=twotabsearchtextbox}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.119, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\ASUS\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:59345}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59345/devtoo..., se:cdpVersion: 106.0.5249.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8a887e5588eedcc9e8020102ed654a5c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy23.sendKeys(Unknown Source)
+	at stepDefinitions.AmazonStepDefinition.kullaniciIphoneIcinAramaYapar(AmazonStepDefinition.java:52)
+	at ✽.kullanici iphone icin arama yapar(file:///C:/Users/ASUS/IdeaProjects/batch81Cucumber/src/test/resources/features/amazonSearch.feature:22)
+]]>
+        </failure>
+    </testcase>
+</testsuite>

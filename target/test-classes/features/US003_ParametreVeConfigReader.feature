@@ -1,6 +1,6 @@
 
 Feature: Parametre Kullanimi
-  @bunu
+
   Scenario: TC01 Parametre kullaniminda ConfigReader Kullanimi
     Given kullanici "faceUrl" sayfasina gider
     Then kullanici 3 saniye bekler
@@ -12,7 +12,7 @@ Feature: Parametre Kullanimi
     Then kullanici 3 saniye bekler
     When url'nin "google" icerdigini test edelim
     And sayfayi kapatir
-  @gp1
+
   Scenario: TC03 Parametre kullaniminda ConfigReader Kullanimi
     Given kullanici "brcUrl" sayfasina gider
     Then kullanici 3 saniye bekler

@@ -6,10 +6,15 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+      //  plugin ={"https:target/cucumber-reports.html"},
+        plugin = {"html:target/cucumber-reports.html",//Yukaridaki yolun aynısı
+                "json:target/json-reports/cucumber.json",//
+                "junit:target/xml-report/cucumber.xml"},//
+
         features = "src/test/resources/features",
         glue = "stepDefinitions",
         //tags = "@gp2 or @bunu", // iki tag'ı aynı anda çalıştırmak isterseniz "@gp1 or @gp2"
-        tags = "@PracticeAmazon",                //@ hangisini istersek onu yazarz onu calıştırır
+        tags = "@web",                //@ hangisini istersek onu yazarz onu calıştırır
         dryRun = false      // true yapınca browser calişmadan test eder ve elsik stepdefinişinları bulmak için lıkllanılır
 /*
 Runner class: Cucumber ın olmazsa olmazlarındandır.

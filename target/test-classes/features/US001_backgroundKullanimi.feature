@@ -9,7 +9,7 @@ Feature: US001 Background Kullanimi
 
     Then kullanici Nutella icin arama yapar
     And sonuclarin Nutella icerdigini test eder
-
+@gp2
   Scenario: TC02 kullanici amazonda Selenium aratir
 
     Then kullanici Selenium icin arama yapar

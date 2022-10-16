@@ -8,7 +8,7 @@ Feature: Amazon Search
     Then kullanici Nutella icin arama yapar
     And sonuclarin Nutella icerdigini test eder
 
-  @gp3
+  
   Scenario: TC02 kullanici amazonda Selenium aratir
 
     Given kullanici amazon sayfasina gider

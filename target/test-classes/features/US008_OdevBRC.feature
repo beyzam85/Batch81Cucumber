@@ -9,12 +9,15 @@ Feature: : US008 OdevBRC
     And brc Login butonuna basar
     Then brc sayfasina giris yapilamadigini kontrol eder
     And kullanici 3 sn bekler
-    And  sayfayi kapatir
 
-    Examples: :
+
+    Examples:
   | gecersizEmail   | gecersizPass |
   |a@gmail.com      |    12346|
   |b@gmail.com      |    13246|
   |c@gmail.com      |    78974|
   |d@gmail.com      |    78564|
   |e@gmail.com      |    41454|
+
+    Scenario: Kapatma Senaryosu
+      And sayfayi kapatir

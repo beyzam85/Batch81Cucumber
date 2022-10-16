@@ -1,3 +1,4 @@
+
 Feature: US004 Parametre Kullanimi
   Scenario:TC01 Parametre Kullanimi
     Given kullanici "https://www.trendyol.com" sayfasinda

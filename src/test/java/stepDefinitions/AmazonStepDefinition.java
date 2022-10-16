@@ -31,7 +31,7 @@ public class AmazonStepDefinition {
 
     @And("sayfayi kapatir")
     public void sayfayiKapatir() {
-        Driver.closeDriver();
+        Driver.quitDriver();
     }
 
 
