@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="25.628">
-    <testcase classname="US002 Parametre Kullanimi" name="TC02 Kullanici amazonda parametreli arama yapar" time="15.006">
-        <system-out>
-            <![CDATA[Given kullanici amazon sayfasina gider......................................passed
-Then kullanici "selenium" icin arama yapar..................................passed
-And sonuclarin "selenium" icerdigini test eder..............................passed
-And sayfayi kapatir.........................................................passed
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.365">
+    <testcase classname="medunna login negative test" name="Negative login test" time="0.035">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given kullanici "https://medunna.com/" sayfasina gider......................passed
+Then login olmak icin signin e tiklar.......................................undefined
+And username icin "<username>" kullanici adini gonderir.....................skipped
+And password icin "<password>" parolasini gonderir..........................skipped
+And signine tiklar..........................................................skipped
+When Authentication information not correct uyarisini dogrular..............skipped
 ]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Amazon Search" name="TC01 kullanici amazonda Nutella aratir" time="9.89">
-        <system-out>
-            <![CDATA[Given kullanici amazon sayfasina gider......................................passed
-Then kullanici Nutella icin arama yapar.....................................passed
-And sonuclarin Nutella icerdigini test eder.................................passed
-]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
