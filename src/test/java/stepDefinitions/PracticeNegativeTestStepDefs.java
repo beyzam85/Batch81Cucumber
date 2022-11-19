@@ -10,6 +10,8 @@ import pages.PracticeNegativeTestPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.time.Duration;
+
 public class PracticeNegativeTestStepDefs {
 
     PracticeNegativeTestPage pntp = new PracticeNegativeTestPage();
@@ -48,7 +50,7 @@ public class PracticeNegativeTestStepDefs {
     }
     @Then("Authentication information not correct uyarisini dogrular")
     public void authentication_information_not_correct_uyarisini_dogrular() {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOf(pntp.popUpMessage));
 
         Assert.assertTrue(pntp.popUpMessage.isDisplayed());

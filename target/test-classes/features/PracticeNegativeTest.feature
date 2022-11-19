@@ -10,3 +10,8 @@ And username icin "<username>" kullanici adini gonderir
 And password icin "<password>" parolasini gonderir
 And signine tiklar
 When Authentication information not correct uyarisini dogrular
+
+
+    Examples:
+      | username | password |
+      | username | password |

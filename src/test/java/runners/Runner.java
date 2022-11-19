@@ -16,6 +16,8 @@ import org.junit.runner.RunWith;
         //tags = "@gp2 or @bunu", // iki tag'ı aynı anda çalıştırmak isterseniz "@gp1 or @gp2"
         tags = "@medunna",                //@ hangisini istersek onu yazarz onu calıştırır
         dryRun = false     // true yapınca browser calişmadan test eder ve elsik stepdefinişinları bulmak için lıkllanılır
+
+
 /*
 Runner class: Cucumber ın olmazsa olmazlarındandır.
 Runwith olmazsa olmazdır
